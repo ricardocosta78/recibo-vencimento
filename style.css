@@ -35,7 +35,9 @@ h1 {
   font-weight: 700;
   text-align: center;
   color: white;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.51);
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020;
 }
 
 .left,
@@ -142,6 +144,8 @@ h1 {
   background-color: darkblue;
   color: white;
   cursor: pointer;
+  box-shadow: 10px 10px 10px #29698e, -5px -4px 4px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
 }
 #valor,
 #resultadoHorasExtra,
@@ -164,6 +168,7 @@ h1 {
 #button7:hover {
   background-color: white;
   color: darkblue;
+  box-shadow: inset 3px -4px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .center select {
@@ -174,6 +179,7 @@ h1 {
   border-radius: 10px;
   border: none;
   text-align: center;
+  box-shadow:inset 1px 2px 0px 2px rgba(0, 0, 0, 0.1), 6px 18px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .container_recibo {
@@ -214,7 +220,7 @@ h3 {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
 .abonos .abonos_out,
 .descontos .desc_out {
@@ -276,7 +282,7 @@ hr {
   letter-spacing: 2px;
   transition: 0.4s ease;
   background-clip: text;
-  text-shadow: 1px 1px 1px rgba(0,0,255,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 255, 0.5);
 }
 #total_final,
 #total_fin {
@@ -294,9 +300,22 @@ hr {
   background: white;
   box-shadow: inset 3px -4px 1px 0 rgba(0, 0, 0, 0.5);
 }
-.container_recibo h1{
-  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
+.container_recibo h1 {
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020;
 }
+
+.div > input {
+  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.68) inset;
+  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.68) inset;
+  -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.68) inset;
+  border-radius: none;
+}
+#resultadoTotal{
+  background-color:#202020;
+}
+
 /* RESPOSIVE WEB MEDIA-QUERIE */
 
 @media (max-width: 700px) {
