@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Recibos</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				<h1>Calcular valor hora</h1>
+				<form action="#" id="formulario">
+					<div class="div">
+						<input
+						type="number"
+						name="vencimento"
+						id="vencimento"
+						step=".01"
+						placeholder="Digite o seu vencimento base?"
+						/>
+						
+						<input
+						type="number"
+						name="horas"
+						id="horas"
+						step=".01"
+						placeholder="Quantas horas semanais trabalha?"
+						/>
+						<div class="res">
+							<input type="text" id="valor" name="valor" placeholder="Resultado"/>
+							<input type="button" id="button"value="Calcular"></input>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="subsidio">
+				<h1>Subsidio Alimentação</h1>
+				<form action="#" id="subsidio">
+					<div class="div">
+						<input
+						type="number"
+						name="subsidio"
+						id="dias_subsidio"
+						step=".01"
+						placeholder="Quantos dias subsidio alimentação?"
+						/>
+						<div class="res">
+							<input type="number" id="total_subsidio" name="valor" placeholder="Resultado"/>
+							<input type="button" id="button7"value="Calcular"></input>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="right">
+				<h1>Calcular Suplementos</h1>
+				<form action="#" id="suplementos">
+					<!-- NOITE SABADO -->
+					<div class="div" >
+						<input
+						type="number"
+						name="horasNoiteSabado"
+						id="horasNoiteSabado"
+						step=".01"
+						placeholder="Quantas horas trabalhou sabado e domingo a noite?"
+						/>
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoNoiteSabado"
+							id="resultadoNoiteSabado"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button1"value="Calcular" 
+							/>
+						</div>
+					</div>
+					<!-- NOITE SEMANA -->
+					<div class="div" >
+						<input
+						type="number"
+						name="horasNoiteSemana"
+						id="horasNoiteSemana"
+						step=".01"
+						placeholder="Quantas horas trabalhou a noite durante a semana?"
+						/>
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoNoiteSemana"
+							id="resultadoNoiteSemana"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button2"value="Calcular" 
+							/>
+						</div>
+					</div>
+					<!-- SABADO APOS 13H -->
+					<div class="div" >
+						<input
+						type="number"
+						name="horasDiaSabado"
+						id="horasDiaSabado"
+						step=".01"
+						placeholder="Quantas horas trabalhou sabado depois 13h e domingo?"
+						/>
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoDiaSabado"
+							id="resultadoDiaSabado"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button3"value="Calcular" 
+							/>
+						</div>
+					</div>
+					<div class="div" >
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoTotal"
+							id="resultadoTotal"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button5"value="Calcular" 
+							/>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="center">
+				<h1>Calcular Horas Extra</h1>
+				<form action="#" id="horasExtra">
+					<!-- NOITE SABADO -->
+					
+					<div class="div" >
+						<select name="categoria" id="categoria">
+							<option value="aux">Auxiliar</option>
+							<option value="enf">Enfermeiro</option>
+						</select>
+						<select 
+							name="horasExtra"
+							id="select"
+						>
+							<option value="noiteSabado">Noite Sabado</option>
+							<option value="noiteDomingo">Noite Domingo</option>
+							<option value="noiteSemana">Noite Semana</option>
+							<option value="noiteFeriado">Noite Vespera Feriado</option>
+							<option value="diaSemana">Dia Semana</option>
+							<option value="diaSabado">Dia Fim-de-Semana</option>
+							<option value="sair">Pretende Sair</option>
+						</select>
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoNoiteSabado"
+							id="resultadoHorasExtra"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button4"value="Calcular" 
+							/>
+						</div>
+						<div class="res">
+							<input 
+							type="text" 
+							name="resultadoNoiteSabado"
+							id="total_HorasExtra"
+							step=".01"
+							placeholder="Resultado"
+							/>
+							<input
+							type="button" id="button6"value="Calcular" 
+							/>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="container_recibo">
+				<h1>RECIBO</h1>
+				<form action="#" id="abonos">
+					
+					<div class="abonos">
+						<h3>ABONOS</h3>
+						<div class="abonos_out">
+							<div class="abonos_in">
+								<label for="#">Vencimento</label>
+								<input type="number" id="vencimento_final" disabled>
+							</div>
+							<div class="abonos_in">
+								<label for="#">Suplementos</label>
+								<input type="number" id="suplem_final" disabled>
+							</div>
+							<div class="abonos_in">
+								<label for="#">Horas_Extra</label>
+								<input type="number" id="horasExtra_final" disabled>
+							</div>
+							<hr>
+							<div class="abonos_in">
+								<label for="#">Total Imp.</label>
+								<input type="number" id="valor_impostos" disabled>
+							</div>
+							<div class="abonos_in">
+								<label for="#">Alimentação</label>
+								<input type="number" id="subs_final" disabled>
+							</div>
+							<hr>
+							<div class="abonos_in">
+								<label for="#">Total Abonos</label>
+								<input type="number" id="total_abonos" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="descontos">
+						<h3>DESCONTOS</h3>
+						<div class="desc_out">
+							<div class="desc_in">
+								<label for="#">	IRS</label>
+								<input type="number" id="irs_final" disabled>
+							</div>
+							<div class="desc_in">
+								<label for="#">	S.Social</label>
+								<input type="number" id="seguranca_final" disabled>
+							</div>
+							<div class="desc_in">
+								<label for="#">	Sindicato</label>
+								<input type="number" id="sindicato_final" disabled>
+							</div>
+							<div class="desc_in">
+								<label for="#"></label>
+								<input type="number" id="empty" disabled>
+							</div>
+							<hr>
+							<div class="desc_in">
+								<label for="#">Total Desc.</label>
+								<input type="number" id="total_descontos" disabled>
+							</div>
+						</div>
+						<div class="desc_in" id="total_css">
+							<label for="#" id="total_fin">TOTAL</label>
+							<input type="number" id="total_final" disabled>
+						</div>
+					</div>
+				</form>
+				<div class="calculo_total" >
+					<div class="res">	
+						<input
+						type="button" id="button8"value="Calcular" 
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+  	</body>
+</html>
