@@ -42,8 +42,7 @@ h1 {
 .right,
 .center,
 .container_recibo,
-.subsidio,
-.calculo_total {
+.subsidio {
   width: 60%;
   height: 100%;
   box-shadow: 5px 5px 12px 0 rgba(0, 0, 0, 0.5);
@@ -54,6 +53,20 @@ h1 {
   padding: 2rem 2rem;
   background-image: url(bg2.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.calculo_total {
+  width: 80%;
+  height: 100%;
+  box-shadow: 5px 5px 12px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 40px;
+  margin: 1rem 2rem;
+  padding: 2rem 2rem;
+  background-image: url(bg2.jpg);
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -148,8 +161,7 @@ h1 {
 #button4:hover,
 #button5:hover,
 #button6:hover,
-#button7:hover,
-#button8:hover {
+#button7:hover {
   background-color: white;
   color: darkblue;
 }
@@ -172,6 +184,7 @@ h1 {
   padding: 2rem 1rem;
   width: 90%;
 }
+
 .abonos,
 .descontos {
   display: flex;
@@ -197,6 +210,11 @@ h1 {
 h3 {
   font-size: 1.8rem;
   color: white;
+  background: white;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
 }
 .abonos .abonos_out,
 .descontos .desc_out {
@@ -247,11 +265,18 @@ hr {
 
 #button8 {
   width: 100%;
-  background: rgba(23, 23, 41, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: white;
+  color: darkblue;
+  background: linear-gradient(145deg, #ffffff, #41a6e0);
+  box-shadow: 10px 10px 10px #29698e, -5px -4px 4px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
-  color: white;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.4s ease;
+  background-clip: text;
+  text-shadow: 1px 1px 1px rgba(0,0,255,0.5);
 }
 #total_final,
 #total_fin {
@@ -260,7 +285,18 @@ hr {
 #total_css {
   margin-right: 1rem;
 }
+.calculo_total div {
+  width: 60%;
+  float: right;
+}
 
+#button8:hover {
+  background: white;
+  box-shadow: inset 3px -4px 1px 0 rgba(0, 0, 0, 0.5);
+}
+.container_recibo h1{
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
+}
 /* RESPOSIVE WEB MEDIA-QUERIE */
 
 @media (max-width: 700px) {
@@ -275,7 +311,7 @@ hr {
   .abonos_in input {
     width: 45%;
     padding: 0;
-    font-size:1.6rem;
+    font-size: 1.6rem;
   }
   .left,
   .center,
@@ -298,8 +334,8 @@ hr {
     font-size: 1.8rem;
   }
   .desc_in input,
-  .abono_in input{
-    width:50%;
+  .abono_in input {
+    width: 50%;
     padding: 0;
   }
 
@@ -309,7 +345,6 @@ hr {
     padding: 0;
     font-size: 1.5rem;
   }
-
 }
 
 @media (max-width: 540px) {
@@ -365,10 +400,10 @@ hr {
     width: 45%;
     padding: 0;
     font-size: 1.3rem;
-}
+  }
 }
 
-@media (max-width: 390px){
+@media (max-width: 390px) {
   .desc_in input,
   .desc_in label,
   .abonos_in label,
@@ -376,14 +411,16 @@ hr {
     width: 50%;
     padding: 0;
     font-size: 1.2rem;
-    text-align:right;
+    text-align: right;
   }
-  #total_final,#total_fin{
+  #total_final,
+  #total_fin {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 350px){
-  #total_final,#total_fin{
+@media (max-width: 350px) {
+  #total_final,
+  #total_fin {
     font-size: 1.3rem;
   }
 }
